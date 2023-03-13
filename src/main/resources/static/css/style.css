@@ -1,0 +1,51 @@
+body {
+  background-color: blanchedalmond;
+}
+
+a, a:visited {
+  color: black;
+}
+
+label {
+  display: inline-table;
+  min-width: 200px;
+  text-align: right;
+}
+
+.for-text-area {
+  vertical-align: top;
+}
+
+.submit-button {
+  float: right;
+}
+
+form.register {
+  width: 50%;
+}
+
+table.employees {
+  width: 50%;
+}
+
+table.employees, table.employees td, table.employees th {
+  border: 1px solid cadetblue;
+  border-collapse: collapse;
+  padding: 2px;
+}
+
+/* container */
+.two-columns {
+  display:flex;
+  column-gap:2rem;
+  line-height: 22px;
+}
+
+.two-columns .label {
+  text-align: right;
+}
+
+/* columns */
+.two-columns > * {
+  width:calc(30% - 1rem);
+}

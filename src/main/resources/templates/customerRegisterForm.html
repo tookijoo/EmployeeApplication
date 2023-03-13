@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <script src="/js/jquery.js"></script>
+</head>
+<body>
+<form role="form" method="post" th:action="@{/employee/register}" th:object="${employeeFrom}" class="register">
+  <h1>Employee Registration</h1>
+  <hr/>
+  <div class="two-columns">
+    <div class="label">
+      <label>Name:</label>
+    </div>
+    <div>
+      <input type="text" th:field="*{name}"/>
+    </div>
+  </div>
+  <div class="two-columns">
+    <div class="label"><label>SureName:</label></div>
+    <div><input type="text" th:field="*{sureName}"/></div>
+  </div>
+  <div class="two-columns">
+    <div class="label"><label>Level:</label></div>
+    <div>
+      <select th:field="*{level}">
+        <option value=""></option>
+        <option value="0">Junior</option>
+        <option value="1">Mid</option>
+        <option value="2">Senior</option>
+      </select>
+    </div>
+  </div>
+  <div class="two-columns">
+    <div class="label"><label>Interests:</label></div>
+    <div>
+      <input type="checkbox" value="F" th:field="*{interests}"/>Football<br/>
+      <input type="checkbox" value="B" th:field="*{interests}"/>Basketball<br/>
+      <input type="checkbox" value="FO" th:field="*{interests}"/>Foto<br/>
+      <input type="checkbox" value="M" th:field="*{interests}"/>Moto<br/>
+    </div>
+  </div>
+  <div class="two-columns">
+    <div class="label"><label class="for-text-area">Description:</label></div>
+    <div>
+      <textarea th:field="*{description}" cols="70" rows="3"></textarea>
+    </div>
+  </div>
+  <hr/>
+  <input type="submit" value="Register" class="submit-button">
+</form>
+<br/>
+<br/>
+<div th:if= "${not #lists.isEmpty(employees)}">
+  <table class="employees">
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>SureName</th>
+      <th>Description</th>
+    </tr>
+    <tr th:each="employee : ${employees}">
+      <td th:utext="${employee.id}"></td>
+      <td th:utext="${employee.name}"></td>
+      <td th:utext="${employee.sureName}"></td>
+      <td th:utext="${employee.description}"></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
