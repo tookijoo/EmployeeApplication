@@ -14,7 +14,7 @@ public class Employee {
   private  Long id;
 
   private String name;
-  private String sureName;
+  private String surname;
   private String level;
   private String birthDate;
   private String description;
@@ -35,12 +35,12 @@ public class Employee {
     this.name = name;
   }
 
-  public String getSureName() {
-    return sureName;
+  public String getSurname() {
+    return surname;
   }
 
-  public void setSureName(String sureName) {
-    this.sureName = sureName;
+  public void setSurname(String surname) {
+    this.surname = surname;
   }
 
   public String getLevel() {
@@ -72,7 +72,7 @@ public class Employee {
     return "Employee{" +
            "id=" + id +
            ", name='" + name + '\'' +
-           ", sureName='" + sureName + '\'' +
+           ", sureName='" + surname + '\'' +
            ", type='" + level + '\'' +
            ", birthDate='" + birthDate + '\'' +
            ", description='" + description + '\'' +

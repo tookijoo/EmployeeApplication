@@ -6,7 +6,7 @@ import java.util.List;
 
 public class EmployeeFrom {
   private String name;
-  private String sureName;
+  private String surname;
   private String level;
   private String birthDate;
   private String description;
@@ -20,12 +20,12 @@ public class EmployeeFrom {
     this.name = name;
   }
 
-  public String getSureName() {
-    return sureName;
+  public String getSurname() {
+    return surname;
   }
 
-  public void setSureName(String sureName) {
-    this.sureName = sureName;
+  public void setSurname(String surname) {
+    this.surname = surname;
   }
 
   public String getLevel() {
@@ -63,7 +63,7 @@ public class EmployeeFrom {
   public Employee toEmployee() {
     Employee employee = new Employee();
     employee.setName(getName());
-    employee.setSureName(getSureName());
+    employee.setSurname(getSurname());
     employee.setLevel(getLevel());
     employee.setBirthDate(getBirthDate());
     String descriptionString = getDescription();
@@ -84,7 +84,7 @@ public class EmployeeFrom {
   public String toString() {
     return "EmployeeFrom{" +
            "name='" + name + '\'' +
-           ", sureName='" + sureName + '\'' +
+           ", sureName='" + surname + '\'' +
            ", level='" + level + '\'' +
            ", birthDate='" + birthDate + '\'' +
            ", description='" + description + '\'' +

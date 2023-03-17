@@ -17,8 +17,8 @@
     </div>
   </div>
   <div class="two-columns">
-    <div class="label"><label>SureName:</label></div>
-    <div><input type="text" th:field="*{sureName}"/></div>
+    <div class="label"><label>Surname:</label></div>
+    <div><input type="text" th:field="*{surname}"/></div>
   </div>
   <div class="two-columns">
     <div class="label"><label>Level:</label></div>
@@ -36,7 +36,7 @@
     <div>
       <input type="checkbox" value="F" th:field="*{interests}"/>Football<br/>
       <input type="checkbox" value="B" th:field="*{interests}"/>Basketball<br/>
-      <input type="checkbox" value="FO" th:field="*{interests}"/>Foto<br/>
+      <input type="checkbox" value="FO" th:field="*{interests}"/>Photo<br/>
       <input type="checkbox" value="M" th:field="*{interests}"/>Moto<br/>
     </div>
   </div>
@@ -56,13 +56,13 @@
     <tr>
       <th>No.</th>
       <th>Name</th>
-      <th>SureName</th>
+      <th>Surname</th>
       <th>Description</th>
     </tr>
     <tr th:each="employee : ${employees}">
       <td th:utext="${employee.id}"></td>
       <td th:utext="${employee.name}"></td>
-      <td th:utext="${employee.sureName}"></td>
+      <td th:utext="${employee.surname}"></td>
       <td th:utext="${employee.description}"></td>
     </tr>
   </table>
