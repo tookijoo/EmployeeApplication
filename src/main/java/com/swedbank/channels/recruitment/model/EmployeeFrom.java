@@ -65,7 +65,6 @@ public class EmployeeFrom {
     employee.setName(getName());
     employee.setSurname(getSurname());
     employee.setLevel(getLevel());
-    employee.setBirthDate(getBirthDate());
     String descriptionString = getDescription();
     if (descriptionString != null && !  descriptionString.isEmpty()) {
       descriptionString += " :: " + getInterestsDescription();

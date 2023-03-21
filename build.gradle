@@ -12,10 +12,6 @@ repositories {
 	mavenCentral()
 	maven { url 'https://repo.spring.io/milestone' }
 	maven { url 'https://repo.spring.io/snapshot' }
-
-	/*maven {
-		url 'http://repo1.swedbank.net:8081/artifactory/list/BBM-VR/'
-	}*/
 }
 
 dependencies {
